@@ -1,0 +1,42 @@
+.headerNav {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  flex-grow: 1;
+  padding: 0 0 0 16px;
+
+  .headerNavDivider {
+    width: 1px;
+    height: 80%;
+    background: linear-gradient(transparent 5%, #252223 6%, #C7B88D, #252223 94%, transparent 95%);
+    margin: 0 16px;
+  }
+  
+  .headerNavSection {
+    align-items: center;
+    display: flex;
+    height: inherit;
+
+    .headerNavButton {
+      background-color: transparent;
+      border: 0;
+      color: #CDBE91;
+      cursor: pointer;
+      font-size: 1.1em;
+      font-family: serif;
+      font-weight: bold;
+      height: inherit;
+      padding: 0 20px;
+      text-transform: uppercase;
+      transition: all .3s;
+      position: relative;
+      
+      &:hover, &.selected {
+        background: linear-gradient(transparent 60%, rgba(255, 244, 183, 0.2));
+        color: #F0E6D2;
+      }
+    }
+  }
+
+}

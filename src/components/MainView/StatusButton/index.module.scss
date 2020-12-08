@@ -1,0 +1,42 @@
+.statusButtonContainer {
+  align-items: center;
+  background: linear-gradient(#4C87A9, #053F4F);
+  border-radius: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+
+  &:hover {
+    background: linear-gradient(#C4F6F6, #005B83);
+
+    .statusButtonInnerRing {
+      .statusButtonSign {
+        background: linear-gradient(#87E5F3, #004A6E);
+      }
+    }
+  }
+
+  .statusButtonInnerRing {
+    align-items: center;
+    background-color: #04090E;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+
+    .statusButtonSign {
+      align-items: center;
+      background: linear-gradient(#59BFCA, #003C62);
+      display: flex;
+      border-radius: 100%;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      font-weight: bold;
+      color: white;
+    }
+  }
+}

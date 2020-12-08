@@ -1,0 +1,29 @@
+.socialNav {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 8px;
+  margin-bottom: 8px;
+
+  .socialNavTitle {
+    color: #A09B8C;
+    font-weight: bold;
+    font-size: 90%;
+    letter-spacing: 1px;
+  }
+
+  .socialNavMenu {
+    align-items: center;
+    display: flex;
+  }
+
+  .socialNavButton {
+    background-color: transparent;
+    border: 0;
+    color: #C8AA6E;
+
+    &:hover {
+      color: #F0E6D2;
+    }
+  }
+}

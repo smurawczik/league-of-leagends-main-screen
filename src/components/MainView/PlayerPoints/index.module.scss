@@ -1,0 +1,22 @@
+.playerPoints {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  .playerPoint {
+    display: flex;
+    align-items: center;
+    color: #F0E6D2;
+    font-weight: bold;
+
+    &:first-of-type {
+      margin-bottom: 12px;
+    }
+
+    .playerPointIcon {
+      width: 18px;
+      height: 18px;
+      margin: 0 8px;
+    }
+  }
+}

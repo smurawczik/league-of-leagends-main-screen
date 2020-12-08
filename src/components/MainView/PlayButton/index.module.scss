@@ -1,0 +1,45 @@
+.playButton {
+  align-items: center;
+  display: flex;
+
+  .playButtonIcon {
+    z-index: 1;
+  }
+
+  .playButtonOuter {
+    background-color: #030910;
+    border: 1px solid #32281E;
+    cursor: pointer;
+    height: 36px;
+    padding: 4px 4px 8px;
+    transform: translateX(-20%);
+    transition: all .2s ease-in-out;
+    z-index: 0;
+
+    &:hover {
+      .playButtonBlueBorder {
+        background: linear-gradient(#47f1ec, #106386);
+      }
+    }
+
+    .playButtonBlueBorder {
+      background: linear-gradient(#08BBB5, #023B54);
+      height: 100%;
+      padding: 2px;
+
+      .playButtonBackground {
+        align-items: center;
+        background-color: #1E2328;
+        color: white;
+        display: flex;
+        height: 100%;
+        padding: 0 32px 0 48px;
+
+        .playButtonText {
+          line-height: 13px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

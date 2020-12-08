@@ -1,0 +1,36 @@
+.userData {
+  align-items: flex-end;
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  padding: 4px 16px 4px 12px;
+
+  .userName {
+    color: #F0E6D2;
+    font-weight: bold;
+  }
+
+  .userStatus {
+    align-items: center;
+    display: flex;
+    margin-top: 4px;
+
+    .userStatusIndicator {
+      border: 3px solid #66F8A0;
+      background-color: #09A646;
+      border-radius: 100%;
+      width: 8px;
+      height: 8px;
+    }
+    
+    .userStatusText {
+      color: #09A646;
+      margin-left: 8px;
+      font-size: 90%;
+    }
+  }
+
+  .notifications {
+    color: #C8AA6E;
+  }
+}

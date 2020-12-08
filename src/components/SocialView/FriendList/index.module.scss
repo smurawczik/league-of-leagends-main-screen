@@ -1,0 +1,109 @@
+.friendList {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  .friendListOpener {
+    align-items: center;
+    color: #828076;
+    cursor: pointer;
+    display: flex;
+    font-size: 95%;
+    font-weight: bold;
+    padding: 6px 8px;
+
+    .friendListOpenerText {
+      padding-left: 8px;
+    }
+
+    &:hover {
+      background-color: rgba($color: #FFFFFF, $alpha: .1);
+      color: #E9E0CD;
+    }
+  }
+
+  .friendListItem {
+    align-items: center;
+    box-sizing: border-box;
+    color: #828076;
+    cursor: pointer;
+    display: flex;
+    width: 100%;
+    padding: 8px;
+
+    &:hover {
+      background-color: rgba($color: #FFFFFF, $alpha: .1);
+      color: #E9E0CD;
+    }
+
+    .friendListItemAvatar {
+      border: 3px solid #A17B30;
+      border-radius: 100%;
+      width: 28px;
+      height: 28px;
+      margin-right: 12px;
+      position: relative;
+
+      .friendStatus {
+        position: absolute;
+        border-radius: 100%;
+        box-shadow: 0 0 0 3px #010A13;
+        right: -4px;
+        bottom: 2px;
+        width: 4px;
+        height: 4px;
+        border: 3px solid transparent;
+        background-color: transparent;
+
+        &.playing {
+          border-color: #0AC5E1;
+          background-color: #005176;
+        }
+
+        &.offline {
+          border-color: #4F514F;
+          background-color: #010A13;
+        }
+
+        &.online {
+          border-color: #66F8A0;
+          background-color: #09A646;
+        }
+
+        &.away {
+          border-color: #9C3213;
+          background-color: #010A13;
+        }
+      }
+    }
+
+    .friendListItemData {
+      display: flex;
+      flex-direction: column;
+
+      .friendListItemName {
+        font-size: 90%;
+        margin-bottom: 4px;
+      }
+
+      .friendStatus {
+        font-size: 80%;
+        &.playing {
+          color: #0AC5E1;
+        }
+
+        &.offline {
+          color: #4F514F;
+        }
+
+        &.online {
+          color: #66F8A0;
+        }
+
+        &.away {
+          color: #9C3213;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@import-normalize;
+
+body {
+  background-color: rgb(166, 174, 182);
+  margin: 0;
+  font-family: Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button:focus {
+  outline: 0;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#root {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}

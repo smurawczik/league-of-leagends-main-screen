@@ -1,0 +1,16 @@
+.header {
+  border-bottom: 1px solid #40403D;
+  display: flex;
+  flex-grow: 1;
+  height: 98px;
+  padding: 0 4px;
+
+  .userLevel {
+    margin-top: 7px;
+    width: 80px;
+  }
+
+  .userDataAndHelperNav {
+    flex-grow: 1;
+  }
+}
