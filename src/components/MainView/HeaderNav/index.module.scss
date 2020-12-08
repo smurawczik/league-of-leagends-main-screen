@@ -4,7 +4,7 @@
   justify-content: space-between;
   height: 100%;
   flex-grow: 1;
-  padding: 0 0 0 16px;
+  padding: 0 0 0 24px;
 
   .headerNavDivider {
     width: 1px;
@@ -16,30 +16,78 @@
   .headerNavSection {
     align-items: center;
     display: flex;
-    height: inherit;
+    height: 100%;
 
     .headerNavButton {
-      background-color: transparent;
+      background: transparent;
       border: 0;
       color: #CDBE91;
       cursor: pointer;
       font-size: 1.1em;
       font-family: serif;
       font-weight: bold;
-      height: inherit;
+      height: 100%;
       padding: 0 22px;
       text-transform: uppercase;
-      transition: all .3s;
+      transition: all .2s linear;
       position: relative;
+      overflow: hidden;
+
+      &:before {
+        content: '';
+        transition: all .2s linear;
+        top: 0;
+        left: 0;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        background: linear-gradient(transparent 50%, rgba(255, 244, 183, 0.2));
+      }
       
       &:hover, &.selected {
-        background: linear-gradient(transparent 50%, rgba(255, 244, 183, 0.2));
         color: #F0E6D2;
+        &:before {
+          opacity: 1;
+        }
+      }
+
+      > * {
+        pointer-events: none;
+      }
+
+      .hoverableGlow {
+        width: 80px;
+        height: 40px;
+        position: absolute;
+        bottom: 0px;
+        transform: translateX(-50%);
+        pointer-events: none;
+        
+        &:before {
+          left: 0;
+          content: '';
+          position: absolute;
+          bottom: 0;
+          height: 1px;
+          width: 100%;
+          background: linear-gradient(to left, transparent, #D4C9B8, transparent);
+        }
+        
+        &:after {
+          left: 0;
+          content: '';
+          position: absolute;
+          bottom: 1px;
+          height: 25px;
+          width: 100%;
+          background: radial-gradient(at center bottom, #d4c9b844 0%, transparent 60%);
+        }
       }
       
       .selectedTriangle {
         position: absolute;
-        top: -3px;
+        top: -1px;
         left: 30%;
         width: 0; 
         height: 0;

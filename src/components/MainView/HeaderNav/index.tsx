@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import classnames from 'classnames';
 import { FaUserCircle, FaSuitcase, FaHammer, FaCoins } from "react-icons/fa";
 
@@ -11,9 +11,25 @@ const HeaderNavButton: React.FC<{ isSelected?: boolean }> = ({ isSelected, child
     [classes.selected]: isSelected,
   });
 
-  return <button className={composedClasses}>
+  const [glowVisible, setGlowVisible] = useState(false);
+  const [glowPosition, setGlowPosition] = useState(0);
+
+  const handleGlow = () => {
+    setGlowVisible(true);
+  }
+
+  const handleGlowMove = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    setGlowPosition(e.nativeEvent.offsetX)
+  }
+
+  const stopMovingGlow = () => {
+    setGlowVisible(false);
+  }
+
+  return <button className={composedClasses} onMouseEnter={handleGlow} onMouseMove={handleGlowMove} onMouseLeave={stopMovingGlow}>
     {isSelected ? <div className={classes.selectedTriangle}><div><span /></div></div> : null}
     {children}
+    {glowVisible && !isSelected && <div className={classes.hoverableGlow} style={{ left: `${glowPosition}px` }} />}
   </button>
 }
 

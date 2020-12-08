@@ -4,7 +4,7 @@
   background: url(./assets/bg.png);
   background-size: 150%;
   background-position: top right;
-  border-top: 5px solid #785A28;
+  border-top: 3px solid #785A28;
   display: flex;
 
   .backgroundOverlay {
@@ -12,7 +12,7 @@
     height: 450px;
     position: absolute;
     background: linear-gradient(#010A13 20%, transparent);
-    top: 2px;
+    top: 3px;
     z-index: 0;
   }
 }
