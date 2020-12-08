@@ -10,7 +10,7 @@
     width: 1px;
     height: 80%;
     background: linear-gradient(transparent 5%, #252223 6%, #C7B88D, #252223 94%, transparent 95%);
-    margin: 0 16px;
+    margin: 0 24px;
   }
   
   .headerNavSection {
@@ -27,14 +27,64 @@
       font-family: serif;
       font-weight: bold;
       height: inherit;
-      padding: 0 20px;
+      padding: 0 22px;
       text-transform: uppercase;
       transition: all .3s;
       position: relative;
       
       &:hover, &.selected {
-        background: linear-gradient(transparent 60%, rgba(255, 244, 183, 0.2));
+        background: linear-gradient(transparent 50%, rgba(255, 244, 183, 0.2));
         color: #F0E6D2;
+      }
+      
+      .selectedTriangle {
+        position: absolute;
+        top: -3px;
+        left: 30%;
+        width: 0; 
+        height: 0;
+
+        > div {
+          &:after {
+            content: '';
+            position: absolute;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;        
+            border-top: 8px solid #88672C;
+            z-index: 2;
+            left: 12px;
+          }
+          
+          &:before {
+            content: '';
+            position: absolute;
+            left: 16px;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;        
+            border-top: 4px solid #010A13;
+            z-index: 3;
+          }
+
+          > span {
+            &:after {
+              content: '';
+              position: absolute;
+              border-left: 20px solid transparent;
+              border-right: 20px solid transparent;        
+              border-top: 20px solid #93702E;
+            }
+            
+            &:before {
+              content: '';
+              position: absolute;
+              left: 5px;
+              border-left: 15px solid transparent;
+              border-right: 15px solid transparent;        
+              border-top: 15px solid #010A13;
+              z-index: 1;
+            }
+          }
+        }
       }
     }
   }

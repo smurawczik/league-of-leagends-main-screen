@@ -11,7 +11,10 @@ const HeaderNavButton: React.FC<{ isSelected?: boolean }> = ({ isSelected, child
     [classes.selected]: isSelected,
   });
 
-  return <button className={composedClasses}>{children}</button>
+  return <button className={composedClasses}>
+    {isSelected ? <div className={classes.selectedTriangle}><div><span /></div></div> : null}
+    {children}
+  </button>
 }
 
 const HeaderNavDivider = () => {
@@ -26,10 +29,10 @@ const HeaderNav = () => {
       <HeaderNavButton>Clash</HeaderNavButton>
     </div>
     <div className={classes.headerNavSection}>
-      <HeaderNavButton><FaUserCircle size={24} /></HeaderNavButton>
-      <HeaderNavButton><FaSuitcase size={24} /></HeaderNavButton>
-      <HeaderNavButton><FaHammer size={24} /></HeaderNavButton>
-      <HeaderNavButton><FaCoins size={24} /></HeaderNavButton>
+      <HeaderNavButton><FaUserCircle size={26} /></HeaderNavButton>
+      <HeaderNavButton><FaSuitcase size={26} /></HeaderNavButton>
+      <HeaderNavButton><FaHammer size={26} /></HeaderNavButton>
+      <HeaderNavButton><FaCoins size={26} /></HeaderNavButton>
       <HeaderNavDivider />
       <PlayerPoints />
     </div>

@@ -1,45 +1,96 @@
 .playButton {
   align-items: center;
   display: flex;
+  margin-right: 8px;
 
   .playButtonIcon {
     z-index: 1;
   }
 
-  .playButtonOuter {
-    background-color: #030910;
-    border: 1px solid #32281E;
-    cursor: pointer;
-    height: 36px;
-    padding: 4px 4px 8px;
-    transform: translateX(-20%);
-    transition: all .2s ease-in-out;
-    z-index: 0;
+  .arrowButton {
+    display: inline-flex;
+    position: relative;
+    padding: 5px;
+    left: -8px;
 
-    &:hover {
-      .playButtonBlueBorder {
-        background: linear-gradient(#47f1ec, #106386);
-      }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      height: 32px;
+      width: 32px;
+      box-sizing: border-box;
+      border: 2px solid #05222d;
     }
 
-    .playButtonBlueBorder {
-      background: linear-gradient(#08BBB5, #023B54);
+    &::after {
+      content: '';
+      position: absolute;
+      top: -1px;
+      right: -1px;
       height: 100%;
-      padding: 2px;
+      width: 110%;
+      background-color: #000a17;
+      border: 1px solid #31271D;
+      z-index: -1;
+    }
 
-      .playButtonBackground {
-        align-items: center;
-        background-color: #1E2328;
-        color: white;
-        display: flex;
-        height: 100%;
-        padding: 0 32px 0 48px;
+    .main {
+      shape-outside: polygon(0 0, calc(100% - 20px) 0%, 100% 50%, calc(100% - 20px) 100%, 0% 100%);
+      clip-path: polygon(0 0, calc(100% - 15px) 0%, 100% 50%, calc(100% - 15px) 100%, 0% 100%);
+      background: linear-gradient(#018699, #006284);
+      height: 32px;
+      min-width: 150px;
+      cursor: pointer;
+      border: none;
+      font-family: 'Beaufort';
+      font-weight: bold;
+      font-size: 16px;
+      color: #a3c0c0;
+      text-transform: uppercase;
+      position: relative;
+      margin-left: -16px;
+      padding: 0 48px;
 
-        .playButtonText {
-          line-height: 13px;
-          font-weight: bold;
-        }
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        shape-outside: polygon(2px 2px, calc(100% - 22px) 2px, calc(100% - 4px) 50%, calc(100% - 22px) calc(100% - 2px), 2px calc(100% - 2px));
+        clip-path: polygon(2px 2px, calc(100% - 16px) 2px, calc(100% - 3px) 50%, calc(100% - 16px) calc(100% - 2px), 2px calc(100% - 2px));
+        background-color: #1e222c;
+        height: 32px;
+        width: 100%;
+        z-index: -1;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: -7px;
+        left: -23px;
+        height: 42px;
+        width: 42px;
+        box-sizing: content-box;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        background: linear-gradient(#000a17, #000a17) padding-box, linear-gradient(#018699, #006284) border-box;
+      }
+      &:hover {
+        background: linear-gradient(#83d7ca, #1f8faf);
+        color: #e2e2d8;
+      }
+      &:hover::before {
+        background: linear-gradient(#152932, #0d394a);
+      }
+      
+      &:hover::after {
+        background: linear-gradient(#000a17, #000a17) padding-box, linear-gradient(#83d7ca, #1f8faf) border-box;
       }
     }
   }
+  
+  
 }
