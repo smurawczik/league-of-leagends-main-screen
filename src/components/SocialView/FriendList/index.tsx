@@ -43,6 +43,21 @@ const FriendList = () => {
       <FriendListItem name="sebastian" status={FriendStatus.PLAYING} />
       <FriendListItem name="George" status={FriendStatus.AWAY} />
       <FriendListItem name="Whose this" status={FriendStatus.OFFLINE} />
+      <FriendListItem name="Whose this" status={FriendStatus.OFFLINE} />
+      <FriendListItem name="Whose this" status={FriendStatus.OFFLINE} />
+      <FriendListItem name="Whose this" status={FriendStatus.OFFLINE} />
+      <FriendListItem name="Whose this" status={FriendStatus.OFFLINE} />
+      <FriendListItem name="Whose this" status={FriendStatus.OFFLINE} />
+      <FriendListItem name="Whose this" status={FriendStatus.OFFLINE} />
+      <FriendListItem name="Whose this" status={FriendStatus.OFFLINE} />
+      <FriendListItem name="Whose this" status={FriendStatus.OFFLINE} />
+      <FriendListItem name="Whose this" status={FriendStatus.OFFLINE} />
+      <FriendListItem name="Whose this" status={FriendStatus.OFFLINE} />
+      <FriendListItem name="Whose this" status={FriendStatus.OFFLINE} />
+      <FriendListItem name="Whose this" status={FriendStatus.OFFLINE} />
+      <FriendListItem name="Whose this" status={FriendStatus.OFFLINE} />
+      <FriendListItem name="Whose this" status={FriendStatus.OFFLINE} />
+      <FriendListItem name="Whose this" status={FriendStatus.OFFLINE} />
       <FriendListItem name="idk lets play" status={FriendStatus.ONLINE} />
     </>
       : null}

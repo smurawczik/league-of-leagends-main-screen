@@ -1,0 +1,55 @@
+.footer {
+  align-items: center;
+  bottom: 0;
+  border-top: 1px solid #1E282D;
+  color: #3C3C40;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+
+  .gameVersion {
+    display: inline-flex;
+    font-size: 85%;
+    font-weight: bold;
+    padding-left: 16px;
+  }
+
+  .footerFirstPart {
+    align-items: center;
+    display: flex;
+  }
+
+  .footerNavItem {
+    border: 0;
+    background: linear-gradient(to bottom, #C4A566, #89714E);
+    box-sizing: border-box;
+    color: #CDBE91;
+    cursor: pointer;
+    padding: 1px 0;
+    margin: 0;
+    margin-right: 2px;
+    
+    &:hover {
+      background: linear-gradient(to bottom, #E9DFCB, #C2973E);
+      .footerNavItemInner {
+        background: linear-gradient(to bottom, #1E2328, #383934);
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    .footerNavItemInner {
+      background: #1E2328;
+      box-sizing: border-box;
+      position: relative;
+      top: 0px;
+      left: 2px;
+      width: calc(100% - 4px);
+      height: calc(100% - 4px);
+      padding: 8px 16px;
+    }
+  }
+}

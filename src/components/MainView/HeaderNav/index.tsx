@@ -13,13 +13,23 @@ const HeaderNavButton: React.FC<{ isSelected?: boolean }> = ({ isSelected, child
 
   const [glowVisible, setGlowVisible] = useState(false);
   const [glowPosition, setGlowPosition] = useState(0);
+  const [glowOpacity, setGlowOpacity] = useState(.5);
 
   const handleGlow = () => {
     setGlowVisible(true);
   }
 
   const handleGlowMove = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    setGlowPosition(e.nativeEvent.offsetX)
+    const width = e.currentTarget.offsetWidth;
+    const xPos = e.nativeEvent.offsetX;
+    setGlowPosition(xPos);
+    if (xPos < 15 || xPos > width - 15) {
+      setGlowOpacity(.5);
+    } else if (xPos < 40 || xPos > width - 40) {
+      setGlowOpacity(.75);
+    } else {
+      setGlowOpacity(1);
+    }
   }
 
   const stopMovingGlow = () => {
@@ -29,7 +39,7 @@ const HeaderNavButton: React.FC<{ isSelected?: boolean }> = ({ isSelected, child
   return <button className={composedClasses} onMouseEnter={handleGlow} onMouseMove={handleGlowMove} onMouseLeave={stopMovingGlow}>
     {isSelected ? <div className={classes.selectedTriangle}><div><span /></div></div> : null}
     {children}
-    {glowVisible && !isSelected && <div className={classes.hoverableGlow} style={{ left: `${glowPosition}px` }} />}
+    {glowVisible && !isSelected && <div className={classes.hoverableGlow} style={{ left: `${glowPosition}px`, opacity: glowOpacity }} />}
   </button>
 }
 
