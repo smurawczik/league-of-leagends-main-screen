@@ -1,11 +1,16 @@
 import React from 'react';
-import Header from './Header';
+
+import Nav from './Nav';
+import NewChamp from './NewChamp';
 
 import classes from './index.module.scss';
 
 const MainView = () => {
   return <div className={classes.mainView}>
-    <Header />
+    <Nav />
+    <div className={classes.newChampContainer}>
+      <NewChamp />
+    </div>
   </div>
 }
 

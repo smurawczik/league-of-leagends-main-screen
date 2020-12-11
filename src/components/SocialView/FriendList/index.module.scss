@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  font-family: 'Spiegel';
 
   .friendListOpener {
     align-items: center;
@@ -40,8 +41,8 @@
     .friendListItemAvatar {
       border: 3px solid #A17B30;
       border-radius: 100%;
-      width: 28px;
-      height: 28px;
+      width: 32px;
+      height: 32px;
       margin-right: 12px;
       position: relative;
 
@@ -83,12 +84,10 @@
       flex-direction: column;
 
       .friendListItemName {
-        font-size: 90%;
-        margin-bottom: 4px;
+        font-size: 110%;
       }
 
       .friendStatus {
-        font-size: 80%;
         &.playing {
           color: #0AC5E1;
         }

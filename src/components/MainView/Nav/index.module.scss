@@ -1,0 +1,34 @@
+.nav {
+  align-items: center;
+  display: flex;
+  width: 100%;
+  padding: 12px 0 12px 40px;
+
+  .navItem {
+    background-color: transparent;
+    border: 0;
+    color: #CDBE91;
+    cursor: pointer;
+    font-family: 'Beaufort';
+    letter-spacing: 1px;
+    position: relative;
+    padding: 0 24px 4px;
+    
+    &.navItemSelected {
+      color: #F0E6D2;
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 1px;
+        width: 100%;
+        background: linear-gradient(to left, transparent 5%, #252223 6%, #C7B88D, #252223 94%, transparent 95%);
+      }
+    }
+
+    &:hover {
+      color: #F0E6D2;
+    }
+  }
+}

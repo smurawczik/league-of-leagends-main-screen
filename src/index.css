@@ -1,9 +1,35 @@
 @import-normalize;
 
+@font-face {
+  font-family: 'Beaufort';
+  src: url('./assets/fonts/Beaufort-Regular.woff') format('woff'),
+       url('./assets/fonts/Beaufort-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Beaufort';
+  src: url('./assets/fonts/Beaufort-Bold.woff') format('woff'),
+       url('./assets/fonts/Beaufort-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Spiegel';
+  src: url('./assets/fonts/Spiegel-Regular.woff') format('woff'),
+	     url('./assets/fonts/Spiegel-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Spiegel';
+  src: url('./assets/fonts/Spiegel-Italic.woff') format('woff'),
+	     url('./assets/fonts/Spiegel-Italic.ttf') format('truetype');
+  font-style: italic;
+}
+
 body {
   background-color: rgb(166, 174, 182);
   margin: 0;
-  font-family: Arial;
+  font-family: 'Beaufort';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -21,4 +47,6 @@ code {
   align-items: center;
   display: flex;
   justify-content: center;
+  width: 1600px;
+  height: 900px;
 }

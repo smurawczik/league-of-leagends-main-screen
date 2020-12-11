@@ -1,5 +1,12 @@
 .mainView {
-  height: inherit;
   flex-grow: 1;
   z-index: 1;
+
+  .newChampContainer {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    padding-top: 56px;
+    padding-right: 56px;
+  }
 }

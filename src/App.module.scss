@@ -7,11 +7,18 @@
   border-top: 3px solid #785A28;
   display: flex;
 
+  .headerAndMainView {
+    flex-grow: 1;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
   .backgroundOverlay {
     width: inherit;
     height: 450px;
     position: absolute;
-    background: linear-gradient(#010A13 20%, transparent);
+    background: linear-gradient(#010A13, transparent);
     top: 3px;
     z-index: 0;
   }

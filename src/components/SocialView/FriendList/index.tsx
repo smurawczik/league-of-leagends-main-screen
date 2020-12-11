@@ -37,18 +37,11 @@ const FriendList = () => {
   return <div className={classes.friendList}>
     <div className={classes.friendListOpener} onClick={() => setShowFriendList(!showFriendList)}>
       {showFriendList ? <BsCaretDownFill size={12} /> : <BsCaretRightFill size={12} />}
-      <span className={classes.friendListOpenerText}>GENERAL (2/20)</span>
+      <span className={classes.friendListOpenerText}>GENERAL (2/12)</span>
     </div>
     {showFriendList ? <>
       <FriendListItem name="sebastian" status={FriendStatus.PLAYING} />
       <FriendListItem name="George" status={FriendStatus.AWAY} />
-      <FriendListItem name="Whose this" status={FriendStatus.OFFLINE} />
-      <FriendListItem name="Whose this" status={FriendStatus.OFFLINE} />
-      <FriendListItem name="Whose this" status={FriendStatus.OFFLINE} />
-      <FriendListItem name="Whose this" status={FriendStatus.OFFLINE} />
-      <FriendListItem name="Whose this" status={FriendStatus.OFFLINE} />
-      <FriendListItem name="Whose this" status={FriendStatus.OFFLINE} />
-      <FriendListItem name="Whose this" status={FriendStatus.OFFLINE} />
       <FriendListItem name="Whose this" status={FriendStatus.OFFLINE} />
       <FriendListItem name="Whose this" status={FriendStatus.OFFLINE} />
       <FriendListItem name="Whose this" status={FriendStatus.OFFLINE} />
