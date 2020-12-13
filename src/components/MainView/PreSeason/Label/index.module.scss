@@ -1,0 +1,133 @@
+.preSeasonLabel {
+  display: flex;
+  height: 100%;
+  width: 260px;
+  z-index: 2;
+  background: linear-gradient(to right, #533F19, #C39534);
+  position: relative;
+
+  .preSeasonLabelDarkBgLayer {
+    background-color: #181D2D;
+    position: relative;
+    top: 2px;
+    left: 2px;
+    width: calc(100% - 2px);
+    height: calc(100% - 4px);
+
+    &:before {
+      content: '';
+      width: 0; 
+      height: 0; 
+      border-top: 6px solid transparent;
+      border-bottom: 6px solid transparent;
+      
+      border-left: 5px solid #181D2D;
+      position: absolute;
+      left: 1px;
+      top: 50%;
+      z-index: 100;
+    }
+
+    .preSeasonLabelLightBgLayer {
+      background: linear-gradient(to right, #E9D6AD, #F2E7D1);
+      position: relative;
+      top: 3px;
+      left: 2px;
+      width: calc(100% - 8px);
+      height: calc(100% - 6px);
+      z-index: 99;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      .preSeasonSign {
+        font-family: 'Beaufort';
+        font-size: 1.6em;
+        font-weight: 900;
+      }
+
+      .preSeasonYear {
+        font-family: 'Beaufort';
+        font-size: 1.25em;
+        font-weight: 700;
+        letter-spacing: 2px;
+      }
+
+      &:before {
+        content: '';
+        width: calc(100% + 2px);
+        position: absolute;
+        height: 2px;
+        bottom: -2px;
+        background-color: #181D2D;
+        z-index: 99;
+      }
+      
+      &:after {
+        content: '';
+        width: calc(100% + 2px);
+        position: absolute;
+        height: 2px;
+        top: -2px;
+        background-color: #181D2D;
+        z-index: 99;
+      }
+    }
+  }
+
+  .firstLayerRightTriangle {
+    width: 0; 
+    height: 0; 
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+    
+    border-left: 45px solid #C79B37;
+    position: absolute;
+    right: -45px;
+  }
+
+  .secondLayerRightTriangle {
+    width: 0;
+    height: 0;
+    border-top: 59px solid transparent;
+    border-bottom: 59px solid transparent;
+    border-left: 45px solid #181D2D;
+    position: absolute;
+    right: -43px;
+    top: 1px;
+  }
+  
+  .thirdLayerRightTriangle {
+    width: 0;
+    height: 0;
+    border-top: 59px solid transparent;
+    border-bottom: 59px solid transparent;
+    border-left: 45px solid #C79B37;
+    position: absolute;
+    right: -41px;
+    top: 1px;
+  }  
+  
+  .forthLayerRightTriangle {
+    width: 0;
+    height: 0;
+    border-top: 59px solid transparent;
+    border-bottom: 59px solid transparent;
+    border-left: 45px solid #181D2D;
+    position: absolute;
+    right: -39px;
+    top: 1px;
+  }
+  
+  .fifthLayerRightTriangle {
+    width: 0;
+    height: 0;
+    border-top: 57px solid transparent;
+    border-bottom: 57px solid transparent;
+    border-left: 45px solid #F2E7D1;
+    position: absolute;
+    right: -37px;
+    top: 3px;
+  }
+}

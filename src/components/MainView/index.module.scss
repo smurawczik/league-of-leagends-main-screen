@@ -1,6 +1,7 @@
 .mainView {
   flex-grow: 1;
   z-index: 1;
+  position: relative;
 
   .newChampContainer {
     display: flex;

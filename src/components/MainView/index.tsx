@@ -4,6 +4,7 @@ import Nav from './Nav';
 import NewChamp from './NewChamp';
 
 import classes from './index.module.scss';
+import PreSeason from './PreSeason';
 
 const MainView = () => {
   return <div className={classes.mainView}>
@@ -11,6 +12,7 @@ const MainView = () => {
     <div className={classes.newChampContainer}>
       <NewChamp />
     </div>
+    <PreSeason />
   </div>
 }
 

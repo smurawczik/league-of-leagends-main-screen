@@ -1,0 +1,12 @@
+.preSeason {
+  display: flex;
+  flex-grow: 1;
+  height: 120px;
+  z-index: 1;
+  position: absolute;
+  bottom: 2px;
+  left: 2px;
+  right: 2px;
+  box-shadow: 0 0px 0 2px #67502B, 0 -1px 0 1px #574027;
+  background: linear-gradient(to right, #0F1014, #241E0E);
+}

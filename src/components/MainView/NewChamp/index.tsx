@@ -2,6 +2,7 @@ import React from 'react';
 
 import Description from './Description';
 import Divider from './Divider';
+import Grid from './Grid';
 
 import classes from './index.module.scss';
 
@@ -10,6 +11,7 @@ const NewChamp = () => {
     <Divider />
     <div className={classes.champDataWrapper}>
       <Description />
+      <Grid />
     </div>
   </div>
 }
